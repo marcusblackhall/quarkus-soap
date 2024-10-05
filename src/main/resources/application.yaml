@@ -1,12 +1,20 @@
 # The context path under which all services will be available
 quarkus:
+  log:
+    category:
+      "org.apache.cxf":
+        level: DEBUG
+
+      "io.quarkiverse.cxf":
+        level: DEBUG
+
   cxf:
     path: /soap
     endpoint:
       "/sayhello":
         implementor: nl.ilovecoding.lookatsoap.HelloServiceImpl
         handlers: nl.ilovecoding.lookatsoap.MessageHandler
-        features: org.apache.cxf.ext.logging.LoggingFeature
+        features: org.apache.cxf.ext.logging.LoggingFeature,org.apache.cxf.ws.addressing.WSAddressingFeature
   http:
     root-path: mb
     non-application-root-path: mb

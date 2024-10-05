@@ -1,4 +1,13 @@
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+               xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+>
+    <soap:Header>
+           <wsa:MessageID>
+              uuid:6B29FC40-CA47-1067-B31D-00DD010662DA
+            </wsa:MessageID>
+            <wsa:To>http://fabrikam123.example/Purchasing</wsa:To>
+            <wsa:Action>sayhello</wsa:Action>
+           </soap:Header>
     <soap:Body>
         <ns2:hello xmlns:ns2="http://lookatsoap.ilovecoding.nl/">
             <arg0>Marcus</arg0>
