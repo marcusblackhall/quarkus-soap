@@ -1,0 +1,26 @@
+# The context path under which all services will be available
+quarkus:
+  cxf:
+    path: /soap
+    endpoint:
+      "/sayhello":
+        implementor: nl.ilovecoding.lookatsoap.HelloServiceImpl
+        features: org.apache.cxf.ext.logging.LoggingFeature
+  http:
+    root-path: mb
+    non-application-root-path: mb
+  # Publish "HelloService" under the context path /${quarkus.cxf.path}/hello
+
+    auth:
+      basic: true
+
+  security:
+    users:
+      embedded:
+        enabled: true
+        plain-text: true
+        users:
+          marcus: marcus12
+        roles:
+          marcus: admin
+

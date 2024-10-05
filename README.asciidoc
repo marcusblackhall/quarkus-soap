@@ -1,0 +1,26 @@
+= Quarkus Soap Project
+
+== Description
+Demo project illustrating how to create a project for a soap web service using basic authentication.
+
+
+== Running the project
+
+To install the project
+----
+mvn clean install
+----
+To start the application
+----
+quarkus dev
+----
+
+== Execute a request
+if you have *httpie* installed execute
+----
+http -a marcus:marcus12 POST :8080/mb/soap/sayhello   SOAPAction:sayhello  @request.xml
+----
+
+== Authorization
+
+The SOAP web service is available to users with the role of admin. Users are defined in  link:src/main/resources/application.yaml[application.yaml]
