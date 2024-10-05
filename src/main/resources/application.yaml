@@ -5,6 +5,7 @@ quarkus:
     endpoint:
       "/sayhello":
         implementor: nl.ilovecoding.lookatsoap.HelloServiceImpl
+        handlers: nl.ilovecoding.lookatsoap.MessageHandler
         features: org.apache.cxf.ext.logging.LoggingFeature
   http:
     root-path: mb
