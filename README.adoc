@@ -7,16 +7,19 @@ Demo project illustrating how to create a project for a soap web service using b
 == Running the project
 
 To install the project
+[,shell]
 ----
 mvn clean install
 ----
 To start the application
+[,shell]
 ----
 quarkus dev
 ----
 
 == Execute a request
 if you have *httpie* installed execute
+[,shell]
 ----
 http -a marcus:marcus12 POST :8080/mb/soap/sayhello   SOAPAction:sayhello  @request.xml
 ----

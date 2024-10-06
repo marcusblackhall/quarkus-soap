@@ -6,6 +6,9 @@
               uuid:6B29FC40-CA47-1067-B31D-00DD010662DA
             </wsa:MessageID>
             <wsa:To>http://fabrikam123.example/Purchasing</wsa:To>
+<!--            <wsa:ReplyTo>-->
+<!--             <wsa:Address>http://requester.nl</wsa:Address>-->
+<!--            </wsa:ReplyTo>-->
             <wsa:Action>sayhello</wsa:Action>
            </soap:Header>
     <soap:Body>
