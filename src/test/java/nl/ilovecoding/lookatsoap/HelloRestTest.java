@@ -19,7 +19,7 @@ class HelloRestTest {
 
         String string = given()
                 .log().all()
-                .when().get("api")
+                .when().get("/1")
                 .then()
                 .log().body()
                 .statusCode(200).extract().body().asString();

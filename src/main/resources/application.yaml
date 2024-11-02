@@ -4,10 +4,10 @@ quarkus:
   log:
     category:
       "org.apache.cxf":
-        level: DEBUG
+        level: INFO
 
       "io.quarkiverse.cxf":
-        level: DEBUG
+        level: INFO
 
   cxf:
     path: /soap

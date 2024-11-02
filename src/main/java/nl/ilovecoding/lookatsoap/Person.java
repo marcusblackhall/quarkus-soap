@@ -1,4 +1,4 @@
 package nl.ilovecoding.lookatsoap;
 
-record Person(String name, String city) {
+record Person(Integer id, String name, String city) {
 }
