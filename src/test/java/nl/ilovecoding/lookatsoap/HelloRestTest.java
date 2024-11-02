@@ -21,6 +21,7 @@ class HelloRestTest {
                 .log().all()
                 .when().get("api")
                 .then()
+                .log().body()
                 .statusCode(200).extract().body().asString();
 
         JsonPath path = new JsonPath(string);
@@ -31,7 +32,6 @@ class HelloRestTest {
                 () ->  assertEquals("Amsterdam", city)
                 );
 
-        assertEquals("Marcus", name);
 
     }
 
