@@ -35,8 +35,7 @@ public class HelloSoapTest {
     private String  bodyfFromFile() throws IOException {
 
         Path path = Path.of("src","test","resources","request.xml");
-        String collect = Files.lines(path).collect(Collectors.joining());
-        return collect;
+        return  Files.lines(path).collect(Collectors.joining());
 
 
     }
