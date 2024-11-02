@@ -7,7 +7,7 @@ import jakarta.ws.rs.Path;
 
 @ApplicationScoped
 
-@Path("rest")
+@Path("/rest")
 public class HelloRest {
     @Path("/api")
     @GET
