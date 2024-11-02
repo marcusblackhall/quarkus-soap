@@ -1,4 +1,6 @@
 quarkus:
+  rest:
+    path: lookatsoap
   log:
     category:
       "org.apache.cxf":
