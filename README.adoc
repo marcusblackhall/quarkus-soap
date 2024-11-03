@@ -3,6 +3,8 @@
 == Description
 Demo project illustrating how to create a project for a soap web service using basic authentication.
 
+An unauthenticated rest service is also created to show that rest and soap can be created in the same repository.
+
 
 == Running the project
 
@@ -17,13 +19,30 @@ To start the application
 quarkus dev
 ----
 
-== Execute a request
+== Execute a __SOAP__ request
 if you have *httpie* installed execute
 [,shell]
 ----
 http -a marcus:marcus12 POST :8080/soap/sayhello @request.xml
 ----
 
-== Authorization
+=== Authorization
 
 The SOAP web service is available to users with the role of admin. Users are defined in  link:src/main/resources/application.yaml[application.yaml]
+
+== Execute REST requests
+
+A rest service is available at the rest path of lookatsoap/rest/api. An endpoint exist for person.
+
+=== Request all persons
+
+[,shell]
+----
+http :8080/lookatsoap/rest/api/person
+----
+
+==== Request person for an id
+[,shell]
+----
+http :8080/lookatsoap/rest/api/person/1
+----
