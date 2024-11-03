@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @ApplicationScoped
-@Path("/rest/api")
+@Path("/rest/api/person")
 public class HelloRest {
 
     List<Person> PERSONS = List.of(

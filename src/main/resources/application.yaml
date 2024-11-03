@@ -10,7 +10,7 @@ quarkus:
         level: INFO
 
   cxf:
-    path: /soap
+    path: /lookatsoap/soap
     endpoint:
       "/sayhello":
         implementor: nl.ilovecoding.lookatsoap.HelloServiceImpl
