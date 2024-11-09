@@ -1,5 +1,5 @@
 steps:
-  - name: 'gcr.io/cloud-builders/mvn'
+  - name: 'maven:3.9-jdk-21'
     args: ['package']
     env:
     - 'GOOGLE_RUNTIME_VERSION=21'
