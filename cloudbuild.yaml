@@ -1,5 +1,5 @@
 steps:
-  - name: 'maven:3.9-jdk-21'
+  - name: '3.9.9-eclipse-temurin-21'
     args: ['package']
     env:
     - 'GOOGLE_RUNTIME_VERSION=21'
