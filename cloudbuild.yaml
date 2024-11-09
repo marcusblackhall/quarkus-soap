@@ -1,0 +1,6 @@
+steps:
+  - name: 'gcr.io/cloud-builders/mvn'
+    args: ['package']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '--tag=gcr.io/$PROJECT_ID/lookatsoap', '.']
+images: ['gcr.io/$PROJECT_ID/lookatsoap']
