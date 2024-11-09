@@ -1,6 +1,8 @@
 steps:
   - name: 'gcr.io/cloud-builders/mvn'
     args: ['package']
+    env:
+    - 'GOOGLE_RUNTIME_VERSION=21'
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '--tag=gcr.io/$PROJECT_ID/lookatsoap', '.']
 images: ['gcr.io/$PROJECT_ID/lookatsoap']
