@@ -4,7 +4,7 @@
     "config:base"
   ],
   "schedule": [
-    "0 8 * * 6"
+    "* 8 * * 6"
   ],
   "timezone": "Europe/Amsterdam"
 }
