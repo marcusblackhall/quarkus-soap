@@ -1,5 +1,6 @@
 quarkus:
 
+
   rest:
     path: lookatsoap
   log:
@@ -11,6 +12,9 @@ quarkus:
         level: INFO
 
   cxf:
+    java2ws:
+      wsdl-name-template: target/Java2wsTest/hello-from-java2ws.wsdl
+      includes: nl.ilovecoding.lookatsoap.HelloService
     path: /lookatsoap/soap
     endpoint:
       "/sayhello":
